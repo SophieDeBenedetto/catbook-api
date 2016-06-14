@@ -3,6 +3,7 @@ module Api
     class HobbiesController < ApplicationController
 
       def index
+        render json: Hobby.all, include: ['cats']
       end
 
       def show
