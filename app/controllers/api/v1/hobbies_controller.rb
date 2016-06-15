@@ -3,7 +3,10 @@ module Api
     class HobbiesController < ApplicationController
 
       def index
-        render json: Hobby.all, include: ['cats']
+        # all hobby objs loaded with their cats vs. 1 query per hobby
+        # do both and take pic of terminal
+        # render json: Hobby.all, include: ['cats']
+        render json: Hobby.includes(:cats), include: ['cats']
       end
 
       def show
