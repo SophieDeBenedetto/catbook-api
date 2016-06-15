@@ -1,24 +1,4 @@
-# README
+# Rails 5 API + JSON API Sample App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Rails 5 + JSON API sample app to demonstrate how to implement Active Model Serializers with the JSON API adapter. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
