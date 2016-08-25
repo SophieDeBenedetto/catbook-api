@@ -3,11 +3,13 @@ module Api
     class CatsController < ApplicationController
 
       def index
-        render json: Cat.includes(:hobbies), include: ['hobbies']
+        render json: Cat.all
+        # render json: Cat.includes(:hobbies), include: ['hobbies']
       end
 
       def show
-        render json: Cat.find(params[:id]), include: ['hobbies']
+        render json: Cat.find(params[:id])
+        # render json: Cat.find(params[:id]), include: ['hobbies']
       end
     end
   end
