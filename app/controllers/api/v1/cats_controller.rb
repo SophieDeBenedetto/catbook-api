@@ -21,10 +21,16 @@ module Api
         end
       end
 
+      def update
+        cat = Cat.find(params[:id])
+        cat.update(cat_params)
+        render json: cat
+      end
+
       private
 
         def cat_params
-          params.require(:cat).permit(:name, :breed, :temperament)
+          params.require(:cat).permit(:name, :breed, :temperament, :weight, :hobby_ids => [])
         end
     end
   end

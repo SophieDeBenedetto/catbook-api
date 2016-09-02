@@ -11,6 +11,7 @@ module Api
       end
 
       def show
+        render json: Hobby.find(params[:id])
       end
     end
   end
