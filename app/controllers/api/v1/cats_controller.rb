@@ -27,6 +27,12 @@ module Api
         render json: cat
       end
 
+      def destroy
+        cat = Cat.find(params[:id])
+        cat.destroy
+        render json: {message: "successfully deleted!"}, status: 200
+      end
+
       private
 
         def cat_params
