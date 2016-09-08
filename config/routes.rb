@@ -5,4 +5,6 @@ Rails.application.routes.draw do
       resources :hobbies, except: [:new, :edit]
     end
   end
+
+  post '/login', to: "sessions#create"  
 end
