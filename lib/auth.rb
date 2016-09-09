@@ -7,7 +7,7 @@ class Auth
       auth_secret,
       ALGORITHM)
   end
-  def self.decode
+  def self.decode(token)
     JWT.decode(token, 
       auth_secret, 
       true, 
