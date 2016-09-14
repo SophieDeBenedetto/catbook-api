@@ -4,12 +4,10 @@ module Api
 
       def index
         render json: Cat.all
-        # render json: Cat.includes(:hobbies), include: ['hobbies']
       end
 
       def show
         render json: Cat.find(params[:id])
-        # render json: Cat.find(params[:id]), include: ['hobbies']
       end
 
       def create
