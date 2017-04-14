@@ -9,3 +9,6 @@ h2 = Hobby.create(name: "playing")
 
 CatHobby.create(cat: c1, hobby: h1)
 CatHobby.create(cat: c2, hobby: h2)
+
+password = BCrypt::Password.create('password')
+User.create(first_name: 'Sophie', last_name: 'DeBenedetto', email: 'sophie@email.com', password_digest: password)
